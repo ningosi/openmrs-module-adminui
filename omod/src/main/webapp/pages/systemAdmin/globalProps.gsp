@@ -52,3 +52,17 @@
 		<% } %>
 	</tbody>
 </table>
+
+ <% if ( (globalProperties != null) && (globalProperties.size() > 0) ) { %>
+ ${ ui.includeFragment("uicommons", "widget/dataTable", [ object: "#list-props",
+					  options: [
+							  bFilter: true,
+							  bJQueryUI: true,
+							  bLengthChange: false,
+							  iDisplayLength: 10,
+							  sPaginationType: '\"full_numbers\"',
+							  bSort: false,
+							  sDom: '\'ft<\"fg-toolbar ui-toolbar ui-corner-bl ui-corner-br ui-helper-clearfix datatables-info-and-pg \"ip>\''
+					  ]
+ ]) }
+ <% } %>
